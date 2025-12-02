@@ -5,17 +5,26 @@ const siteadmin = "Thomas Bragg"
 const correctauthanswers = ["easthope", "EASTHOPE", "eASTHOPE", "Easthope"];
 const sites = ["Totton", "Dibden", "Fawley", "OLC"];
 
+
 document.getElementById("sitename").innerHTML = sitename;
 document.getElementById("siteadmin").innerHTML = siteadmin;
 
 function isauthed() {
-	console.log("placeholder for real auth check")
+	var authmybeasthope = document.cookie;
+	if (authmybeasthope === 'authedmaboi=RowanDaBeasthope') {
+		console.log("FUCK YEAH WE'RE AUTHEEEED");
+		return true;
+	} else {
+		console.log("WE ARE NOT AUTH FUCK FUCK FUCK");
+		return false;
+	}
   return true;
 }
 function authchecker() {
   let nfsauthanswer = document.forms["nfs-auth-question"]["nfs-auth-answer"].value;
   if (correctauthanswers.includes(nfsauthanswer.trim())) {
-    authwin();
+	document.cookie = "authedmaboi=RowanDaBeasthope; expires=Thu, 10 Dec 2099 07:42:55 UTC";
+	authwin();
     return true;
   } else {
     alert("Incorrect.");
@@ -25,5 +34,5 @@ function authchecker() {
 }
 
 function authwin() {
-	console.log("Insert the code that would set a cookie to 1 thus the pupil being authed in.")
+	document.location.replace("/index.html");
 }
