@@ -5,9 +5,11 @@
 <p style="font-size: 32px">Checking auth status...</p>
 <script>
 	if (isauthed() === true) {
+		// okay we're authed let's continue
 		window.location.replace("/login.html")
 	} else {
 		// either we're not authed or the cookie has expired
 		window.location.replace("/auth.html");
 	}
+
 </script>
