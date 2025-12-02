@@ -1,4 +1,9 @@
 # New Forest School Discord Replacement
-In New Forest School, many puppils attend, but not all can access the discord community, so I thought I would make my own version for them.
+In New Forest School, many pupils attend, but not all can access the discord community, so I thought I would make my own version for them.
 
-This code will not function properly without using a web server, for testing, I am using `python -m http.server 80`
+**NOTE: Most of this code will not function properly without using a web server.** For testing, I am using `python -m http.server 80`
+
+# Code analysis so that we're on the same page
+auth.html is to verify that the person visiting the site is indeed an NFS student or has been in the past.
+
+core.js contains variables such as the site name, site admin, and auth related stuff.
