@@ -1,2 +1,2 @@
-# nfs-discord-replacement
-This is a discord replacement for New Forest School.
+# New Forest School Discord Replacement
+In New Forest School, many puppils attend, but not all can access the discord community, so I thought I would make my own version for them.
